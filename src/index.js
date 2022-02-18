@@ -358,7 +358,7 @@ setTimeout(() => {
     // (Want user to switch back to map with (i) button)
     infoPageIframe.addEventListener( "load", function() {
         document.getElementById('info').contentWindow.document
-            .getElementsByTagName('button')[0].parentNode
+            .getElementsByTagName('button')[0].parentNode.parentNode
             .style.display = "none";
     });
 }, 1000);
