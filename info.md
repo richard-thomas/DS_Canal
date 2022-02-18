@@ -1,6 +1,6 @@
 # Dorset & Somerset Canal Evidences
 
-[<button>View the map</button>](https://richard-thomas.github.io/DS_canal/dist) - click to open the interactive web map; you can always come back to view this information page from within the web map by clicking the :information_source: icon at the top left of the map.
+[<button>View the map</button>](https://richard-thomas.github.io/DS_Canal/dist) - click to open the interactive web map; you can always come back to view this information page from within the web map by clicking the :information_source: icon at the top left of the map.
 
 Table of Contents:
 
@@ -164,11 +164,11 @@ Note that evidence presented in this web map is currently just from maps, LiDAR 
 The raw spatial data created for this web map is freely available as Open Data for re-use/re-work. It is contained in a single file in the [OGC GeoPackage](https://www.geopackage.org/) format which is readable by almost all GIS software. Data licensing:
 
 - Copyright :copyright: 2022 Richard Thomas. This work is licensed under the Creative Commons Attribution 4.0 [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) International License.
-- Licensing also depends on including the appropriate acknowledgements to the data it was derived from shown in the following _"Acknowledgements & References"_ section. (Or you could just include a direct link to that section: https://richard-thomas.github.io/DS_canal/info#acknowledgements--references)
+- Licensing also depends on including the appropriate acknowledgements to the data it was derived from shown in the following _"Acknowledgements & References"_ section. (Or you could just include a direct link to that section: https://richard-thomas.github.io/DS_Canal/info#acknowledgements--references)
 
 All of the software and web source code used in producing this web map are Open Source.
 
-Further details of the software/code/data are provided in the README page of the associated [DS_canal GitHub Repository](https://github.com/richard-thomas/DS_canal/).
+Further details of the software/code/data are provided in the README page of the associated [DS_Canal GitHub Repository](https://github.com/richard-thomas/DS_Canal/).
 
 ## Acknowledgements & References
 
