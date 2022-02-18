@@ -1,0 +1,43 @@
+{
+  "name": "ds_canal",
+  "version": "0.1.0",
+  "description": "Dorset & Somerset Canal web map (QGIS to OpenLayers demo)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open --no-client-overlay-warnings",
+    "start-custom": "webpack serve --config custom/webpack.config.js --open --no-client-overlay-warnings",
+    "build": "webpack",
+    "build-custom": "webpack --config custom/webpack.config.js",
+    "sql-install": "cp node_modules/sql.js/dist/sql-wasm.wasm dist"
+  },
+  "keywords": [
+    "SLD",
+    "styling",
+    "OpenLayers",
+    "ol",
+    "QGIS",
+    "canal"
+  ],
+  "author": "Richard Thomas",
+  "license": "ISC",
+  "devDependencies": {
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^6.6.0",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "ol": "^6.12.0",
+    "ol-layerswitcher": "^3.8.3",
+    "ol-load-geopackage": "^1.0.2",
+    "ol-sld-styler": "^1.0.1",
+    "proj4": "^2.7.5"
+  }
+}
