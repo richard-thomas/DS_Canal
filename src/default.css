@@ -19,6 +19,7 @@ th, td {
     height: calc(100% - 40px);
     transition: all 0.35s ease;
     transform: translateY(0);
+    z-index: 11;
 }
 .show-info {
     transform: translateY(-100%);

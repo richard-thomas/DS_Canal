@@ -1,6 +1,6 @@
 # Dorset & Somerset Canal Evidences
 
-[<button>View the map</button>](https://richard-thomas.github.io/DS_Canal/dist) - click to open the interactive web map; you can always come back to view this information page from within the web map by clicking the ( &#x1D55A; ) icon at the top left of the map.
+[<button>View the map</button>](https://richard-thomas.github.io/DS_Canal/dist) - click to open the interactive web map; you can always come back to view this information page from within the web map by clicking the ( i ) icon at the top left of the map.
 
 Table of Contents:
 
@@ -36,7 +36,7 @@ The web map (if not already opened) can be opened with the **[View the map]** bu
 
 **Map buttons** (down the left hand side):
 
-- ( &#x1D55A; ) (information icon): show this information page within the map (click again to hide the page)
+- ( i ) (information icon) show this information page within the map (click again to hide the page)
 - [+] zoom in (or use scroll wheel, pinch-zoom or double-click)
 - [-] zoom out (or use scroll wheel, pinch-zoom)
 - [&#x21D1;] (hidden unless map has been rotated): re-align north to up
