@@ -170,7 +170,9 @@ The raw spatial data created for this web map is freely available as Open Data f
 
 All of the software and web source code used in producing this web map are Open Source.
 
-Further details of the software/code/data are provided in the README page of the associated [DS_Canal GitHub Repository](https://github.com/richard-thomas/DS_Canal/).
+Further details of the software/code/data are provided in the <a href="https://github.com/richard-thomas/DS_Canal/#readme" target="_blank">README</a> page of the associated DS_Canal GitHub Repository.
+
+external link
 
 ## Acknowledgements & References
 
