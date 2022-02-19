@@ -1,6 +1,6 @@
 {
   "name": "ds_canal",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Dorset & Somerset Canal web map (QGIS to OpenLayers demo)",
   "private": true,
   "scripts": {
