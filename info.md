@@ -1,6 +1,6 @@
 # Dorset & Somerset Canal Evidences
 
-[<button>View the map</button>](https://richard-thomas.github.io/DS_Canal/dist) - click to open the interactive web map; you can always come back to view this information page from within the web map by clicking the :information_source: icon at the top left of the map.
+[<button>View the map</button>](https://richard-thomas.github.io/DS_Canal/dist) - click to open the interactive web map; you can always come back to view this information page from within the web map by clicking the ( &iopf; ) icon at the top left of the map.
 
 Table of Contents:
 
@@ -30,18 +30,19 @@ An overview of the whole canal and its history can be found at the [Dorset & Som
 
 The web map (if not already opened) can be opened with the **[View the map]** button at the top of this page.
 
-**Layer Control pane** (on the right hand side): use this to select the data layers to display/hide. Note that layer name text will be greyed out and italicized if it is not being rendered because it is out of range (zoom in more for it to appear). At the bottom of this (scrollable) pane a single base layer can be selected (map, aerial photography, LiDAR elevation) to display under the data. This pane can be hidden with the :fast_forward: icon at the top right.
+**Layer Control pane** (on the right hand side): use this to select the data layers to display/hide. Note that layer name text will be greyed out and italicized if it is not being rendered because it is out of range (zoom in more for it to appear). At the bottom of this (scrollable) pane a single base layer can be selected (map, aerial photography, LiDAR elevation) to display under the data. This pane can be hidden with the [&raquo;] icon at the top right.
 
 **Click/Touch a feature**: display its attributes in a popup window. Specifically, if a section of the canal path is clicked (i.e. the "probable path evidence" layer) the evidence for why that section is thought to be located there is presented.
 
 **Map buttons** (down the left hand side):
 
-- :information_source: (information icon): show this information page within the map (click again to hide the page)
-- +/-: zoom in/out (or use scroll wheel, pinch-zoom or double-click)
-- :arrow_up: (hidden unless map has been rotated): re-align north to up
-- :arrow_upper_right: display a map marker at your current location
-- :straight_ruler: switch on/off distance measuring tool (then click to start drawing, double-click to end)
-- :ticket: (at bottom of map): toggle the map key display on/off
+- ( &iopf; ) (information icon): show this information page within the map (click again to hide the page)
+- [+] zoom in (or use scroll wheel, pinch-zoom or double-click)
+- [-] zoom out (or use scroll wheel, pinch-zoom)
+- [&DoubleUpArrow;] (hidden unless map has been rotated): re-align north to up
+- [&RightTriangle;] display a map marker at your current location
+- [&parsl;] (ruler) switch on/off distance measuring tool (then click location to start measuring, double-click to end)
+- [&equiv;] (at bottom of map): toggle the map key display on/off
 
 **Other Mouse/Touch controls**:
 
@@ -184,15 +185,15 @@ Source maps and aerial imagery used for this mapping project:
   - Use of these digitised maps for non-commercial purposes has been granted for this project under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International [(CC-BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) licence.
 - **Vision of Britain**: OS First Series (1817) [sheet 19](https://www.visionofbritain.org.uk/maps/sheet/first_edition/lm_19) or ["slippy map" centred on Frome](https://www.visionofbritain.org.uk/maps/series?xCenter=3172813.46805&yCenter=2786460.29441&scale=63360&viewScale=181417.4208&mapLayer=nineteenth&subLayer=first_edition&title=Ordnance%20Survey%20and%20Ordnance%20Survey%20of%20Scotland%20First%20Series&download=true) - used as an indicator of how much of the canal was actually built
   - This work is based on data provided through [www.VisionofBritain.org.uk](https://www.visionofbritain.org.uk/) and uses historical material which is copyright of the Great Britain Historical GIS Project and the University of Portsmouth
-  - Copyright :copyright: 2004-2015 of the Great Britain Historical GIS Project and the University of Portsmouth. This work is licensed under the Creative Commons Attribution 4.0 [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) International License.
+  - Copyright &copy; 2004-2015 of the Great Britain Historical GIS Project and the University of Portsmouth. This work is licensed under the Creative Commons Attribution 4.0 [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) International License.
 - **British Library**: [Edmund Crocker Frome map (1808)](https://britishlibrary.georeferencer.com/maps/80517dd5-3bd7-567f-be4a-4bb54b56dbf6/) - used as an indicator of how much of the canal was actually built
   - Part of the British Library collection: [Terms & Conditions](https://www.bl.uk/about-us/terms-and-conditions/websites-and-online-services)
-  - Georeferencing: Copyright :copyright: 2019 [Klokan Technologies GmbH](http://klokantech.com/)
+  - Georeferencing: Copyright &copy; 2019 [Klokan Technologies GmbH](http://klokantech.com/)
 - **UK Parliament Archives**: William Bennet’s 1795 survey of entire canal [Abstract at UK Parliamentary Archives](https://archives.parliament.uk/collections/getrecord/GB61_HL_PO_PB_3_plan5) - planned route traced from a georeferenced copy of the map
   - permission to trace the canal path within this map granted for this project (publishing of the original map would require explicit licensing)
   - (map not available online, but can be viewed in person by arrangement)
 - **Environment Agency**: LiDAR elevation data & Vertical Aerial Photography datasets - used for locating unmapped fragments of the canal and for accurately aligning mapped features; WMS LiDAR data streaming is also used directly in the web map to provide alternative web map base layers
-  - :copyright: Environment Agency copyright and/or database right 2021 All rights reserved
+  - &copy; Environment Agency copyright and/or database right 2021 All rights reserved
   - [Open Data from the Environment Agency Geomatics Team](https://experience.arcgis.com/experience/753ad2ebd3554fa696885b8c366c3049) used under the [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
   - These datasets and others can be viewed with the [Environment Agency Survey Open Data Index Catalogues](https://environment.maps.arcgis.com/apps/webappviewer/index.html?id=f765c2a97d644f08927d5cd5abe58d87)
   - Links for downloading or streaming datasets can be found on the [Defra Data Services Platform](https://environment.data.gov.uk/)

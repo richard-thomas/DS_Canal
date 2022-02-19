@@ -56,7 +56,7 @@ The following open source software and icons were used under licence:
 - [Font Awesome](https://fontawesome.com/) v5 icons under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence
 - [OpenLayers](https://openlayers.org/) [ol](https://www.npmjs.com/package/ol) NPM module: under the [BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause)
 - Proj4js [proj4](https://www.npmjs.com/package/proj4) NPM module under the [MIT](https://github.com/proj4js/proj4js/blob/master/LICENSE.md) licence
-- OpenLayers LayerSwitcher [ol-layerswitcher](https://www.npmjs.com/package/ol-layerswitcher) NPM module :copyright: Matt Walker, under the MIT licence
+- OpenLayers LayerSwitcher [ol-layerswitcher](https://www.npmjs.com/package/ol-layerswitcher) NPM module &copy; Matt Walker, under the MIT licence
 - OpenLayers OGC GeoPackage Loader [ol-load-geopackage](https://www.npmjs.com/package/ol-load-geopackage) NPM module under the [ISC](https://github.com/richard-thomas/ol-load-geopackage/blob/master/LICENCE.md) licence
 - OpenLayers SLD Styler [ol-sld-styler](https://www.npmjs.com/package/ol-sld-styler) NPM module under the [ISC](https://github.com/richard-thomas/ol-sld-styler/blob/main/LICENCE.md) licence
 - (Within ol-sld-styler) [@NieuwlandGeo/sldreader](https://www.npmjs.com/package/@nieuwlandgeo/sldreader) NPM module under the [ISC](https://github.com/NieuwlandGeo/SLDReader/blob/master/LICENSE) licence
