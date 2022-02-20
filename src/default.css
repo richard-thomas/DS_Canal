@@ -14,15 +14,26 @@ th, td {
     border: none;
     display: inline-block;
     position: fixed;
-    left: 0;
-    width: 100%;
+    left: 40px;
+    width: calc(100% - 42px);
     height: calc(100% - 40px);
+    border: 1px solid rgb(255,184,55);
+    border-radius: 10px;
     transition: all 0.35s ease;
     transform: translateY(0);
     z-index: 11;
 }
 .show-info {
     transform: translateY(-100%);
+}
+
+/* Allow full width info screen on narrow screens, e.g. phones */
+@media only screen and (max-width: 600px) {
+    .info-page {
+        left: 0;
+        width: 100%;
+        height: calc(100% - 40px);
+    }
 }
 
 #map {
