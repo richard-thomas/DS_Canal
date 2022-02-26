@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     font-family: sans-serif;
     font-size: small;
+    overscroll-behavior: contain;
 }
 th, td {
     vertical-align: top;

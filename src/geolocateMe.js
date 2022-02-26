@@ -62,7 +62,10 @@ export default function (map, displayProjection) {
     isTracking = false;
 
     geolocation = new ol_Geolocation({
-        projection: displayProjection
+        projection: displayProjection,
+        trackingOptions: {
+            enableHighAccuracy: true
+        }
     });
 
     // Small circle at detected location

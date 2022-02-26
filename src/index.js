@@ -47,6 +47,7 @@ const showDebugInfo = true;
 
 // Page to display in "info" iFrame when (i) button pressed
 const infoPageURL = 'https://richard-thomas.github.io/DS_Canal/info.html';
+//const infoPageURL = 'iframe_contents.html'; // DEBUG only
 
 // Check mandatory bits of global map configuration have already been defined
 // gpkgFiles: All required QGIS layers (+ layer styles) combined into OGC
@@ -353,13 +354,15 @@ selectSingleClick.on('select', function (e) {
 const infoPageIframe = document.getElementById('info');
 setTimeout(() => {
     infoPageIframe.setAttribute('src', infoPageURL);
-
-    // Hide "View the map" button + paragraph as this will force a reload
-    // (Want user to switch back to map with (i) button)
     infoPageIframe.addEventListener( "load", function() {
-        document.getElementById('info').contentWindow.document
-            .getElementsByTagName('button')[0].parentNode.parentNode
-            .style.display = "none";
+        // Hide "View the map" button + paragraph as this will force a reload
+        // (Want user to switch back to map with (i) button)
+        infoPageIframe.contentWindow.document.getElementsByTagName('button')[0]
+            .parentNode.parentNode.style.display = "none";
+
+        // Prevent pull to refresh on touch devices (except in Safari)
+        infoPageIframe.contentWindow.document.body.style.overscrollBehavior
+            = 'contain';
     });
 }, 1000);
 
