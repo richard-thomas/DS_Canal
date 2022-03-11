@@ -75,6 +75,10 @@ th, td {
 .ol-attribution.ol-control:not(.ol-collapsed) > button {
     background-color: rgba(255,184,55,.27);
 }
+/* Remove padding reserved for a closer on the left */
+.layer-switcher.shown.layer-switcher-activation-mode-click {
+    padding-left: 2px;
+}
 /*
 .layer-switcher .panel {
     border-color: rgba(255,184,55,.27);
