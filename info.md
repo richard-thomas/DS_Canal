@@ -82,8 +82,8 @@ The following maps were consulted both to check on the alignment of the historic
 
 ### Environment Agency LiDAR Elevation Data
 
-- **Digital Surface Model (DSM) 1m resolution 2017**: The very fine horizontal and vertical resolution of this elevation data was invaluable in locating depressions that might correspond with the canal centreline, even in the middle of fields where no obvious visible traces of the canal remain. It was also helpful in aligning hachure in maps corresponding to embankments or cuttings.
-- **Digital Terrain Model (DTM) 1m resolution 2019** [(view map)](https://environment.maps.arcgis.com/apps/webappviewer/index.html?id=f765c2a97d644f08927d5cd5abe58d87): The DTM is the result of post-processing of the DSM to remove surface features such as buildings, trees or walls. When this works well it can reveal features hidden in the clutter of the DSM. However, sometimes this post-processing can lead to misleading results.
+- **Digital Surface Model (DSM) 1m resolution 2020**: The very fine horizontal and vertical resolution of this elevation data was invaluable in locating depressions that might correspond with the canal centreline, even in the middle of fields where no obvious visible traces of the canal remain. It was also helpful in aligning hachure in maps corresponding to embankments or cuttings.
+- **Digital Terrain Model (DTM) 1m resolution 2020** [(view map)](https://environment.maps.arcgis.com/apps/webappviewer/index.html?id=f765c2a97d644f08927d5cd5abe58d87): The DTM is the result of post-processing of the DSM to remove surface features such as buildings, trees or walls. When this works well it can reveal features hidden in the clutter of the DSM. However, sometimes this post-processing can lead to misleading results.
 
 (Note that "hillshade" (i.e. simulated shadows) renderings of this LiDAR data can be directly viewed within the web map as base layers. However, for tracing it was often more revealing to use a height colour-coded rendering to emphasize locations of notable changes in elevation).
 
