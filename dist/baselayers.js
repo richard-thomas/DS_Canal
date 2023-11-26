@@ -6,7 +6,8 @@ import ol_layer_Tile from 'ol/layer/Tile';
 import ol_source_XYZ from 'ol/source/XYZ';
 import ol_source_BingMaps from 'ol/source/BingMaps';
 import ol_source_TileWMS from 'ol/source/TileWMS';
-import ol_source_Stamen from 'ol/source/Stamen';
+// Simplification option when we move to OL8
+//import ol_source_StadiaMaps from 'ol/source/StadiaMaps';
 import ol_source_OSM from 'ol/source/OSM';
 import ol_source_Raster from 'ol/source/Raster';
 import ol_layer_Image from 'ol/layer/Image';
@@ -20,12 +21,24 @@ import ol_layer_Image from 'ol/layer/Image';
 export default function (hideAtStartup, foldAtStartup) {
     const bingApiKey = 'ArU2vlCG7nlfwgmoMXAPdq0PaCpjPWoaBKyzdxN47o2CCPJfZ0w5wDG7SnBcxoIW';
 
-    var lyrStamenTonerLite = new ol_layer_Tile({
-        title: 'OpenStreetMap (Stamen Toner Lite)',
+    const lyrStamenTonerLite = new ol_layer_Tile({
+        title: 'Stamen Toner Lite',
         opacity: 0.35,
-        source: new ol_source_Stamen({
-            layer: 'toner-lite'
+        source: new ol_source_XYZ({
+                url: 'https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}@2x.png',
+            attributions: [
+            '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>',
+            '&copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a>',  // Required for Stamen styles
+            '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a>',
+            '&copy; <a href="https://www.openstreetmap.org/about/" target="_blank">OpenStreetMap contributors</a>'
+            ]
         })
+/*
+        // Simplification option when we move to OL8 (new StadiaMaps module)
+        source: new ol_source_StadiaMaps({
+            layer: 'stamen_toner_lite'
+        })
+*/
     });
 
     var lyrOsmMapnik = new ol_layer_Tile({
@@ -34,9 +47,9 @@ export default function (hideAtStartup, foldAtStartup) {
         source: new ol_source_OSM()
     });
 
-    var lyrCompositeDTM1mHillshade2020 = new ol_layer_Tile({
+    var lyrCompositeDTM1mHillshade2022 = new ol_layer_Tile({
         source: new ol_source_TileWMS(({
-            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terrain-model-dtm-1m-2020/wms',
+            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terrain-model-dtm-1m-2022/wms',
             attributions: '&copy; Environment Agency copyright and/or database right 2020. ' +
                 'All rights reserved. ' +
                 '<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"' +
@@ -46,13 +59,13 @@ export default function (hideAtStartup, foldAtStartup) {
                 "TILED": "true",
                 "VERSION": "1.3.0"},
             })),
-        title: 'DTM Hillshade (1m resolution, 2020)'
+        title: 'DTM Hillshade (1m resolution, 2022)'
     });
 
-    var lyrCompositeDSM1mHillshade2020 = new ol_layer_Tile({
+    var lyrCompositeDSM1mHillshade2022 = new ol_layer_Tile({
         source: new ol_source_TileWMS(({
-            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-surface-model-DSM-1m-2020/wms',
-            attributions: '&copy; Environment Agency copyright and/or database right 2020. ' +
+            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-surface-model-first-return-dsm-1m-2022/wms',
+            attributions: '&copy; Environment Agency copyright and/or database right 2022. ' +
                 'All rights reserved. ' +
                 '<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"' +
                 ' target="_blank" title="Open Government Licence">OGL</a>',
@@ -61,7 +74,7 @@ export default function (hideAtStartup, foldAtStartup) {
                 "TILED": "true",
                 "VERSION": "1.3.0"},
             })),
-        title: 'DSM Hillshade (1m resolution, 2020)'
+        title: 'DSM Hillshade (1m resolution, 2022)'
     });
 
     var lyrAerialPhotoLabelledBing = new ol_layer_Tile({
@@ -161,8 +174,8 @@ export default function (hideAtStartup, foldAtStartup) {
 
     // Layer Group: 'Environment Agency LiDAR'
     var layersEnvironmentAgencyLiDAR = [
-        lyrCompositeDTM1mHillshade2020,
-        lyrCompositeDSM1mHillshade2020];
+        lyrCompositeDTM1mHillshade2022,
+        lyrCompositeDSM1mHillshade2022];
     var group_EnvironmentAgencyLiDAR = new ol_layer_Group({
         layers: layersEnvironmentAgencyLiDAR,
         'fold': 'open',
