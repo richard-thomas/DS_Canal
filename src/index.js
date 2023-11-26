@@ -355,14 +355,28 @@ const infoPageIframe = document.getElementById('info');
 setTimeout(() => {
     infoPageIframe.setAttribute('src', infoPageURL);
     infoPageIframe.addEventListener( "load", function() {
-        // Hide "View the map" button + paragraph as this will force a reload
-        // (Want user to switch back to map with (i) button)
-        infoPageIframe.contentWindow.document.getElementsByTagName('button')[0]
-            .parentNode.parentNode.style.display = "none";
 
-        // Prevent pull to refresh on touch devices (except in Safari)
-        infoPageIframe.contentWindow.document.body.style.overscrollBehavior
-            = 'contain';
+        // After loading, attempt to modify the iFrame contents to remove
+        // functions that work well in a standalone page, but not when viewed
+        // within an iFrame.
+        // (If testing on localhost this is likely to fail as it will be
+        //  detected as a cross-origin security breach)
+        try {
+            // Hide "View the map" button + paragraph as this will force a reload
+            // (Want user to switch back to map with (i) button)
+            infoPageIframe.contentWindow.document.getElementsByTagName('button')[0]
+                .parentNode.parentNode.style.display = "none";
+
+            // Prevent pull to refresh on touch devices (except in Safari)
+            infoPageIframe.contentWindow.document.body.style.overscrollBehavior
+                = 'contain';
+        }
+        catch (exception) {
+            console.warn('Within the info page (i), unable to hide "View the Map" ' +
+                'button or suppress pull-to-refresh. Expect this if testing ' +
+                'on localhost due to CORS checks. Exception message generated: ' +
+                exception);
+        }
     });
 }, 1000);
 
