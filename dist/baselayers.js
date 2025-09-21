@@ -4,7 +4,6 @@
 import ol_layer_Group from 'ol/layer/Group';
 import ol_layer_Tile from 'ol/layer/Tile';
 import ol_source_XYZ from 'ol/source/XYZ';
-import ol_source_BingMaps from 'ol/source/BingMaps';
 import ol_source_TileWMS from 'ol/source/TileWMS';
 // Simplification option when we move to OL8
 //import ol_source_StadiaMaps from 'ol/source/StadiaMaps';
@@ -47,61 +46,81 @@ export default function (hideAtStartup, foldAtStartup) {
         source: new ol_source_OSM()
     });
 
-    var lyrCompositeDTM1mHillshade2022 = new ol_layer_Tile({
+    var lyrCompositeDTM1mHillshade = new ol_layer_Tile({
         source: new ol_source_TileWMS(({
-            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terrain-model-dtm-1m-2022/wms',
-            attributions: '&copy; Environment Agency copyright and/or database right 2020. ' +
+            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terrain-model-dtm-1m/wms',
+            attributions: '&copy; Environment Agency copyright and/or database right 2023. ' +
                 'All rights reserved. ' +
                 '<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"' +
                 ' target="_blank" title="Open Government Licence">OGL</a>',
             params: {
-                "LAYERS": "1",
+                "LAYERS": "Lidar_Composite_Hillshade_DTM_1m",
                 "TILED": "true",
                 "VERSION": "1.3.0"},
             })),
-        title: 'DTM Hillshade (1m resolution, 2022)'
+        title: 'DTM Hillshade (1m resolution, 2023)'
     });
 
-    var lyrCompositeDSM1mHillshade2022 = new ol_layer_Tile({
+    var lyrCompositeDSM1mHillshade = new ol_layer_Tile({
         source: new ol_source_TileWMS(({
-            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-surface-model-first-return-dsm-1m-2022/wms',
-            attributions: '&copy; Environment Agency copyright and/or database right 2022. ' +
+            url: 'https://environment.data.gov.uk/spatialdata/lidar-composite-digital-surface-model-first-return-dsm-1m/wms',
+            attributions: '&copy; Environment Agency copyright and/or database right 2023. ' +
                 'All rights reserved. ' +
                 '<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"' +
                 ' target="_blank" title="Open Government Licence">OGL</a>',
             params: {
-                "LAYERS": "1",
+                "LAYERS": "Lidar_Composite_Hillshade_FZ_DSM_1m",
                 "TILED": "true",
                 "VERSION": "1.3.0"},
             })),
-        title: 'DSM Hillshade (1m resolution, 2022)'
+        title: 'DSM Hillshade (1m resolution, 2023)'
     });
 
     var lyrAerialPhotoLabelledBing = new ol_layer_Tile({
         title: 'Aerial Photo Labelled (Bing)',
-        source: new ol_source_BingMaps({
-            imagerySet: 'AerialWithLabelsOnDemand',
+        source: new ol_source_XYZ({
+            attributions: 'Copyright &copy; Ordnance Survey',
+            crossOrigin: 'Anonymous',
             maxZoom: 20,
-            //hidpi: true,
-            key: bingApiKey
+            tileUrlFunction: function (tileCoord) {
+                var z = tileCoord[0];
+                var x = tileCoord[1];
+                var y = tileCoord[2];
+                return 'http://ak.dynamic.t0.tiles.virtualearth.net/comp/ch/' +
+                    quadkey(x, y, z) + '?mkt=en-US&it=A,G,L&og=967&n=z&key=' +
+                    bingApiKey
+            }
         })
     });
 
     var lyrAerialPhotographyBing = new ol_layer_Tile({
         title: 'Aerial Photography (Bing)',
-        source: new ol_source_BingMaps({
-            imagerySet: 'Aerial',
+        source: new ol_source_XYZ({
+            attributions: 'Copyright &copy; Ordnance Survey',
+            crossOrigin: 'Anonymous',
             maxZoom: 20,
-            //hidpi: true,
-            key: bingApiKey
+            tileUrlFunction: function (tileCoord) {
+                var z = tileCoord[0];
+                var x = tileCoord[1];
+                var y = tileCoord[2];
+                return 'http://ecn.t3.tiles.virtualearth.net/tiles/a' +
+                    quadkey(x, y, z) + '.jpeg?g=0&dir=dir_n';
+            }
         })
     });
 
-    var srcBingOS = new ol_source_BingMaps({
-        imagerySet: 'OrdnanceSurvey',
+    var srcBingOS = new ol_source_XYZ({
+        attributions: 'Copyright &copy; Ordnance Survey',
+        crossOrigin: 'Anonymous',
         maxZoom: 17,
-        //hidpi: true,
-        key: bingApiKey
+        tileUrlFunction: function (tileCoord) {
+            var z = tileCoord[0];
+            var x = tileCoord[1];
+            var y = tileCoord[2];
+            return 'https://ecn.t0.tiles.virtualearth.net/tiles/r' +
+                quadkey(x, y, z) + '?g=8662&lbl=l1&productSet=mmOS&key=' +
+                bingApiKey;
+        }
     });
 
     var lyrOrdnanceSurveyBing = new ol_layer_Tile({
@@ -174,8 +193,8 @@ export default function (hideAtStartup, foldAtStartup) {
 
     // Layer Group: 'Environment Agency LiDAR'
     var layersEnvironmentAgencyLiDAR = [
-        lyrCompositeDTM1mHillshade2022,
-        lyrCompositeDSM1mHillshade2022];
+        lyrCompositeDTM1mHillshade,
+        lyrCompositeDSM1mHillshade];
     var group_EnvironmentAgencyLiDAR = new ol_layer_Group({
         layers: layersEnvironmentAgencyLiDAR,
         'fold': 'open',
